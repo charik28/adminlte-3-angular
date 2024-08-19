@@ -1,3 +1,30 @@
+
+npm i @profabric/angular-components
+npm error code ERESOLVE
+npm error ERESOLVE unable to resolve dependency tree
+npm error
+npm error While resolving: dz-geo@3.1.2-SNAPSHOT
+npm error Found: @angular/common@18.0.4
+npm error node_modules/@angular/common
+npm error   @angular/common@"18.0.4" from the root project
+npm error
+npm error Could not resolve dependency:
+npm error peer @angular/common@"^12.0.0" from @profabric/angular-components@0.2.4
+npm error node_modules/@profabric/angular-components
+npm error   @profabric/angular-components@"*" from the root project
+npm error
+npm error Fix the upstream dependency conflict, or retry
+npm error this command with --force or --legacy-peer-deps
+npm error to accept an incorrect (and potentially broken) dependency resolution.
+npm error
+npm error
+npm error For a full report see:
+npm error C:\Users\Charik\AppData\Local\npm-cache\_logs\2024-08-19T14_26_26_123Z-eresolve-report.txt
+npm error A complete log of this run can be found in: C:\Users\Charik\AppData\Local\npm-cache\_logs\2024-08-19T14_26_26_123Z-debug-0.log
+
+
+
+
 <p align="center" style="margin-bottom: 32px">
   <a href="https://erdkse.com" >
     <img src="https://raw.githubusercontent.com/erdkse/adminlte-3-angular/main/src/assets/img/logo.png" alt="AdminLTE logo" width="75" height="75">
