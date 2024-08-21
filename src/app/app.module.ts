@@ -37,7 +37,6 @@ import {SidebarSearchComponent} from './components/sidebar-search/sidebar-search
 import {NgxGoogleAnalyticsModule} from 'ngx-google-analytics';
 import {environment} from 'environments/environment';
 import {ActivityTabComponent} from './pages/profile/activity-tab/activity-tab.component';
-import {TimelineTabComponent} from './pages/profile/timeline-tab/timeline-tab.component';
 import {SettingsTabComponent} from './pages/profile/settings-tab/settings-tab.component';
 import {PostComponent} from './pages/profile/post/post.component';
 import {InfoBoxComponent} from './components/info-box/info-box.component';
@@ -73,14 +72,15 @@ registerLocaleData(localeEn, 'en-EN');
         ControlSidebarComponent,
         SidebarSearchComponent,
         ActivityTabComponent,
-        TimelineTabComponent,
         SettingsTabComponent,
         PostComponent,
         InfoBoxComponent,
         SmallBoxComponent,
         ContentHeaderComponent,
         LoadingComponent,
-        OverlayLoadingComponent
+        OverlayLoadingComponent,
+
+        
     ],
     bootstrap: [AppComponent],
     imports: [

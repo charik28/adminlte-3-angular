@@ -11,7 +11,10 @@ export class ProfileComponent {
     public activeTabSubject = new BehaviorSubject<string>('ACTIVITY');
     activeTab$ = this.activeTabSubject.asObservable();
 
-    public user;
+    user: { photoURL: string } | null = null;
+    onImageError(event: Event) {
+        (event.target as HTMLImageElement).src = 'assets/img/default-profile.png';
+      }
 
     constructor(private appService: AppService) {}
 

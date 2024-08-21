@@ -5,8 +5,9 @@ import {
     Renderer2,
     HostBinding
 } from '@angular/core';
+import { Router } from '@angular/router';
 import {UntypedFormGroup, UntypedFormControl, Validators} from '@angular/forms';
-import {ToastrService} from 'ngx-toastr';
+//import {ToastrService} from 'ngx-toastr';
 import {AppService} from '@services/app.service';
 
 @Component({
@@ -23,8 +24,9 @@ export class LoginComponent implements OnInit, OnDestroy {
 
     constructor(
         private renderer: Renderer2,
-        private toastr: ToastrService,
-        private appService: AppService
+        //private toastr: ToastrService,
+        private appService: AppService,
+        private router: Router
     ) {}
 
     ngOnInit() {
@@ -39,17 +41,19 @@ export class LoginComponent implements OnInit, OnDestroy {
     }
 
     async loginByAuth() {
-        if (this.loginForm.valid) {
-            this.isAuthLoading = true;
-            await this.appService.loginWithEmail(
-                this.loginForm.value.email,
-                this.loginForm.value.password
-            );
+        // if (this.loginForm.valid) {
+        //     this.isAuthLoading = true;
+        //     await this.appService.loginWithEmail(
+        //         this.loginForm.value.email,
+        //         this.loginForm.value.password
+        //     );
 
-            this.isAuthLoading = false;
-        } else {
-            this.toastr.error('Form is not valid!');
-        }
+        //     this.isAuthLoading = false;
+        // } else {
+        //     this.toastr.error('Form is not valid!');
+        // }
+
+        this.router.navigateByUrl('/profile');
     }
 
     async loginByGoogle() {
