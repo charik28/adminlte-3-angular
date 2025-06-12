@@ -4,7 +4,7 @@ import {UiState} from '@/store/ui/state';
 import {Component, HostBinding, OnInit} from '@angular/core';
 import {UntypedFormGroup, UntypedFormControl} from '@angular/forms';
 import {Store} from '@ngrx/store';
-import {AppService} from '@services/app.service';
+import {AuthService} from '@services/auth.service';
 import {Observable} from 'rxjs';
 
 const BASE_CLASSES = 'main-header navbar navbar-expand';
@@ -19,7 +19,7 @@ export class HeaderComponent implements OnInit {
     public searchForm: UntypedFormGroup;
 
     constructor(
-        private appService: AppService,
+        private appService: AuthService,
         private store: Store<AppState>
     ) {}
 

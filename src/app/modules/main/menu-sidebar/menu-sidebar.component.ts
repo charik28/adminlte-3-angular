@@ -2,7 +2,7 @@ import {AppState} from '@/store/state';
 import {UiState} from '@/store/ui/state';
 import {Component, HostBinding, OnInit} from '@angular/core';
 import {Store} from '@ngrx/store';
-import {AppService} from '@services/app.service';
+import {AuthService} from '@services/auth.service';
 import {User} from 'firebase/auth';
 import {Observable} from 'rxjs';
 
@@ -19,7 +19,7 @@ export class MenuSidebarComponent implements OnInit {
     public menu = MENU;
 
     constructor(
-        public appService: AppService,
+        public appService: AuthService,
         private store: Store<AppState>
     ) {}
 

@@ -6,7 +6,7 @@ import {
     HostBinding
 } from '@angular/core';
 import {UntypedFormGroup, UntypedFormControl, Validators} from '@angular/forms';
-import {AppService} from '@services/app.service';
+import {AuthService} from '@services/auth.service';
 import {ToastrService} from 'ngx-toastr';
 
 @Component({
@@ -25,7 +25,7 @@ export class RegisterComponent implements OnInit, OnDestroy {
     constructor(
         private renderer: Renderer2,
         private toastr: ToastrService,
-        private appService: AppService
+        private appService: AuthService
     ) {}
 
     ngOnInit() {

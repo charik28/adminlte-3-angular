@@ -4,7 +4,7 @@ import {connectAuthEmulator, getAuth} from 'firebase/auth';
 import {environment} from 'environments/environment';
 
 const firebaseConfig: FirebaseOptions = environment.FIREBASE_CONFIG || {
-    apiKey: 'MOCK_KEY'
+    apiKey: 'AIzaSyDGxU2OVCwlAVQZyTwQdfecFGoBcijCuRc'
 };
 
 const app = initializeApp(firebaseConfig);

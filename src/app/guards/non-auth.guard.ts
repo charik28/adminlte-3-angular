@@ -8,7 +8,7 @@ import {
     UrlTree,
     Router
 } from '@angular/router';
-import {AppService} from '@services/app.service';
+import {AuthService} from '@services/auth.service';
 import {Observable} from 'rxjs';
 
 @Injectable({
@@ -17,7 +17,7 @@ import {Observable} from 'rxjs';
 export class NonAuthGuard implements CanActivate, CanActivateChild {
     constructor(
         private router: Router,
-        private appService: AppService
+        private appService: AuthService
     ) {}
 
     canActivate(
@@ -28,7 +28,7 @@ export class NonAuthGuard implements CanActivate, CanActivateChild {
         | Promise<boolean | UrlTree>
         | boolean
         | UrlTree {
-        if (this.appService.user) {
+        if (!this.appService.user) {
             return true;
         }
         this.router.navigate(['/']);

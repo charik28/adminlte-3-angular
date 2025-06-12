@@ -1,5 +1,5 @@
-import {Component} from '@angular/core';
-import {AppService} from '@services/app.service';
+import {Component, OnInit} from '@angular/core';
+import {AuthService} from '@services/auth.service';
 import {BehaviorSubject, Observable} from 'rxjs';
 
 @Component({
@@ -7,13 +7,13 @@ import {BehaviorSubject, Observable} from 'rxjs';
     templateUrl: './profile.component.html',
     styleUrls: ['./profile.component.scss']
 })
-export class ProfileComponent {
+export class ProfileComponent implements OnInit {
     public activeTabSubject = new BehaviorSubject<string>('ACTIVITY');
     activeTab$ = this.activeTabSubject.asObservable();
 
     public user;
 
-    constructor(private appService: AppService) {}
+    constructor(private appService: AuthService) {}
 
     ngOnInit(): void {
         this.user = this.appService.user;
